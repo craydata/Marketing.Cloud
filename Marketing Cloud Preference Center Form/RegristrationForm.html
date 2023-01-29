@@ -1,0 +1,115 @@
+%%[
+InsertData(
+    "WebpageDE",
+    "Email",RequestParameter("email"),
+    "FirstName",RequestParameter("firstname"),
+     "LastName",RequestParameter("lastname"),
+     "DOB",RequestParameter("dob"),
+     "Gender",RequestParameter("gender"),
+     "CompanyName",RequestParameter("companyname"),
+     "Proficiency",RequestParameter("proficiency")
+     
+     )
+]%%
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>Registration Form</title>
+</head>
+<body>
+<form action="%%=RequestParameter('PAGEURL')=%%" method="post">
+      <div class="row setup-content" id="">
+        <div class="col-xs-6 col-md-offset-3">
+          <div class="col-md-12">
+            <h3><strong>Personal Informatiom</strong></h3>
+
+
+            <p>
+              Please enter your personal details.
+            </p><br>
+            <div class="form-group">
+              <label class="control-label">Email</label>
+              <input  type="email"
+                      required="required"
+                      class="form-control"
+                      placeholder="EMAIL"
+                      id="email"
+                      name="email">
+            </div>
+ 
+            <div class="form-group">
+              <label class="control-label">First Name</label>
+              <input type="text"
+                     required="required"
+                     class="form-control"
+                     placeholder="First Name"
+                     id="firstname"
+                     name="firstname">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Last Name</label>
+              <input  type="text"
+                      required="required"
+                      class="form-control"
+                      placeholder="Last Name"
+                      id="lastname"
+                      name="lastname">
+            </div>
+            <div class="form-group">
+              <label class="control-label"Date of Birth D.O.B</label>
+              <input type="date" class="form-control" id="date" name="dob">
+            </div>
+ 
+            <label class="control-label">Gender</label>
+            <div class="form-group">
+              <div class="col-sm-3">
+                <label class="radio-inline">
+                  <input name="gender" id="input-gender-male" value="Male" type="radio" />Male
+                </label>
+              </div>
+              <div class="col-sm-3">
+                <label class="radio-inline">
+                  <input name="gender" id="input-gender-female" value="Female" type="radio" />Female
+                </label>
+              </div><br>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Company Name</label>
+              <input type="text"
+                     required="required"
+                     class="form-control"
+                     placeholder="Company Name"
+                     id="companyname"
+                     name="companyname">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Proficiency</label>
+              <input  type="text"
+                      required="required"
+                      class="form-control"
+                      placeholder=""
+                      id="proficiency"
+                      name="proficiency">
+            </div>
+            <button id="myButton" class="btn btn-success btn-lg pull-left" type="submit">Submit</button>
+          </div>
+        </div>
+     </div>
+    </form>
+  </body>
+</html>
+
+//https://learnfrenzy.com/blog/insert-data-into-data-extension-using-cloud-pages-and--ampscript
+
+
+
+• Create a landing page in Marketing Cloud CloudPages
+• Create a Data Extension in Marketing Cloud Email Studio
+• Create a form using HTML
+• Insert Data - AMPscript
